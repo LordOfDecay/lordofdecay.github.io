@@ -1,45 +1,68 @@
-index.html
-style.css
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Tom Holt — Character Artist</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tom Holt | Character Artist / Worldbuilder</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <main>
-    <header>
-      <h1>Tom Holt</h1>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Tom Holt</h1>
+      <p class="site-subtitle">Character Artist / Worldbuilder</p>
+      <p class="site-intro">
+        I create character-driven work with a focus on atmosphere, materiality, and narrative presence.
+      </p>
+    </div>
+  </header>
 
-      <p class="subtitle">Character Artist / Worldbuilder</p>
-    </header>
-<hr class="intro-rule">
-
-    <section class="intro">
-      <p class="intro">
-  I create <strong>character-driven work</strong> with a focus on
-  <em>atmosphere</em>, <em>materiality</em>, and <em>narrative presence</em>.
-</p>
-
+  <main class="container">
+    <section class="featured-project">
+      <a href="projects/twilight-cemetery.html" class="featured-link">
+        <img src="LordOfDecay.github.io/images/twilight-hero.jpg" alt="Twilight Cemetery hero image" class="featured-image" />
+        <div class="featured-text">
+          <p class="eyebrow">Featured Project</p>
+          <h2>Twilight Cemetery</h2>
+          <p>
+            A stylised 3D environment focused on atmosphere, silhouette, and lighting contrast.
+          </p>
+        </div>
+      </a>
     </section>
 
-    <section class="gallery">
-  <img src="images/material-study.jpg" alt="Material surface study" loading="lazy">
-  <img src="images/judgement-statue.jpg" alt="Lady of Judgement statue render" loading="lazy">
-  <img src="images/snake-portrait.jpg" alt="Stylised character portrait" loading="lazy">
-</section>
+    <section class="project-grid">
+      <article class="project-card">
+        <a href="projects/twilight-cemetery.html">
+          <img src="LordOfDecay.github.io/images/twilight-wide.jpg" alt="Twilight Cemetery wide shot" />
+          <img src="LordOfDecay.github.io/images/twilight-perspective.jpg" alt="Twilight Cemetery perspective shot" />
+          <h3>Twilight Cemetery</h3>
+          <p>Stylised environment project exploring mood, shape language, and light.</p>
+        </a>
+      </article>
 
+      <article class="project-card">
+        <a href="#">
+          <img src="images/material-study.jpg" alt="Material study preview" />
+          <h3>Material Study</h3>
+          <p>Surface, texture, and lighting exploration.</p>
+        </a>
+      </article>
 
-    <footer>
-      <p>
-        Contact:
-        <a href="mailto:mr.thomasholt@gmail.com">mr.thomasholt@gmail.com</a>
-      </p>
-    </footer>
+      <article class="project-card">
+        <a href="#">
+          <img src="images/portrait-piece.jpg" alt="Portrait piece preview" />
+          <h3>Portrait Piece</h3>
+          <p>Character-focused work with an emphasis on tone and presence.</p>
+        </a>
+      </article>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Contact: <a href="mailto:mr.thomasholt@gmail.com">mr.thomasholt@gmail.com</a></p>
+    </div>
+  </footer>
 </body>
 </html>
