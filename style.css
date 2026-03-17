@@ -75,29 +75,28 @@ a {
 
 .featured-link {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 2rem;
-  align-items: center;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 0;
+  align-items: stretch;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  min-height: 320px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .featured-link:hover {
   transform: translateY(-3px);
   border-color: #3a3a3a;
-}
-
-.featured-image {
-  height: 100%;
-  object-fit: cover;
-  border-radius: 0;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
 }
 
 .featured-text {
-  padding: 2rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .eyebrow {
