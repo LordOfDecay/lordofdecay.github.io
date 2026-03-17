@@ -178,3 +178,34 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+.about-page {
+  padding: 3rem 0 4rem;
+}
+
+.about-copy {
+  max-width: 760px;
+}
+
+.about-copy p {
+  margin: 0 0 1.5rem;
+  color: #d6d6d6;
+  font-size: 1.08rem;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.site-nav a {
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.site-nav a:hover {
+  color: var(--text);
+}
