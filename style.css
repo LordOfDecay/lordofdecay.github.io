@@ -1,98 +1,180 @@
-style.css* {
+:root {
+  --bg: #060606;
+  --panel: #0d0d0d;
+  --soft: #161616;
+  --text: #f2f2f2;
+  --muted: #a1a1a1;
+  --line: #232323;
+  --accent: #cfcfcf;
+  --max-width: 1100px;
+  --radius: 14px;
+}
+
+* {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #0e0e0e;
-  color: #e6e6e6;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
   line-height: 1.6;
 }
 
-main {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
-}
-
-header {
-  margin-bottom: 2rem;
-}
-
-h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.subtitle {
-  color: #b0b0b0;
-  margin-top: 0.3rem;
-}
-
-.intro {
-  max-width: 600px;
-  margin-bottom: 3rem;
-}
-
-.intro strong {
-  font-weight: 600;
-}
-
-.intro em {
-  font-style: normal;
-  color: #aaa;
-}
-
-
-.intro-rule {
-  width: 60px;
-  height: 1px;
-  border: none;
-  background: #333;
-  margin: 1.5rem 0;
-}
-
-
-.gallery {
-  margin-top: 3rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.gallery img {
-  border-radius: 6px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+img {
   display: block;
-  background-color: #1a1a1a;
-  filter: contrast(1.05) saturate(0.95);
-}
-
-.gallery img:hover {
-  opacity: 0.92;
-  transition: opacity 150ms ease;
-}
-
-
-
-footer {
-  border-top: 1px solid #2a2a2a;
-  padding-top: 1.5rem;
-  font-size: 0.9rem;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
 }
 
 a {
-  color: #b3001b; /* subtle crimson */
+  color: inherit;
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+.container {
+  width: min(92%, var(--max-width));
+  margin: 0 auto;
 }
 
+.site-header {
+  padding: 5rem 0 3rem;
+  border-bottom: 1px solid var(--line);
+}
 
+.site-title {
+  margin: 0;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.site-subtitle {
+  margin: 0.6rem 0 1.5rem;
+  color: var(--muted);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.site-intro {
+  max-width: 680px;
+  color: #d6d6d6;
+  font-size: 1.15rem;
+}
+
+.featured-project {
+  padding: 3rem 0;
+}
+
+.featured-link {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.featured-link:hover {
+  transform: translateY(-3px);
+  border-color: #3a3a3a;
+}
+
+.featured-image {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.featured-text {
+  padding: 2rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+
+.featured-text h2 {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+}
+
+.featured-text p:last-child {
+  margin-bottom: 0;
+  color: #d2d2d2;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1rem 0 4rem;
+}
+
+.project-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: #3a3a3a;
+}
+
+.project-card a {
+  display: block;
+}
+
+.project-card img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.project-card h3 {
+  margin: 1rem 1rem 0.4rem;
+  font-size: 1.2rem;
+}
+
+.project-card p {
+  margin: 0 1rem 1.2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 2rem 0 3rem;
+  color: var(--muted);
+}
+
+.site-footer a {
+  color: #e44;
+}
+
+@media (max-width: 900px) {
+  .featured-link {
+    grid-template-columns: 1fr;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
